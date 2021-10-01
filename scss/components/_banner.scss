@@ -1,0 +1,132 @@
+.images-banner-container {
+  padding: 2rem;
+  width: 90vw;
+  max-width: 400px;
+  background: var(--clr-blue-600);
+  border-radius: 1rem 5rem 1rem 1rem;
+  .banner-icons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 1.5rem;
+    .banner-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--clr-blue-800);
+      border-radius: 0.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.content-banner-container {
+  position: relative;
+  border-radius: 1rem;
+  background: var(--clr-blue-600);
+  padding: 2rem 2rem 3.7rem;
+  margin: 1rem;
+  width: 90vw;
+  max-width: 400px;
+  font-family: var(--ff-raleway);
+  p {
+    text-align: center;
+    font-size: var(--font-size);
+    color: rgba($color: #fff, $alpha: 0.4);
+    span {
+      color: white;
+    }
+  }
+  .loader {
+    height: 1.125rem;
+    background: hsla(229, 57%, 11%, 0.6);
+    border-radius: 100vw;
+    padding: 2px;
+    margin-top: 1rem;
+    .loaded {
+      background-image: var(--clr-gradient);
+      width: 71.5%;
+      height: 100%;
+      border-radius: 100vw;
+      padding: 2px;
+      .point {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-left: auto;
+        background: white;
+      }
+    }
+  }
+  .limits {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+  }
+
+  .space-left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 50%;
+    bottom: -17%;
+    left: 50%;
+    padding: 0.7rem 1rem;
+    transform: translate(-50%);
+    border-radius: 0.7rem;
+    span:first-of-type {
+      font-size: 2rem;
+      font-weight: var(--fw-bold);
+      color: rgba(0, 0, 0, 0.8);
+    }
+    span {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .images-banner-container {
+    padding: 4rem;
+    .logo-container {
+      width: 50%;
+    }
+  }
+  .content-banner-container {
+    margin: 0 0 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    p {
+      text-align: left;
+    }
+    .space-left {
+      border-bottom-right-radius: 0;
+      width: 25%;
+      height: 35%;
+      top: -20%;
+      left: 80%;
+    }
+    .space-left::before,
+    .space-left::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      border-color: transparent;
+      border-style: solid;
+    }
+
+    .space-left::after {
+      border-radius: 4px;
+      border-width: 12px;
+      border-right-color: #fff;
+      border-top-color: #fff;
+    }
+  }
+}
